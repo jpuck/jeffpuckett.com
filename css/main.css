@@ -126,29 +126,29 @@ body {
 
 .mastfoot {
   color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.8);
 }
 
 
 /*
  * Affix and center
  */
-
-@media (min-width: 768px) {
-  /* Pull out the header and footer */
-  .masthead {
+/* Pull out the header and footer */
+.masthead {
     position: fixed;
     top: 0;
-  }
-  .mastfoot {
+}
+.mastfoot {
     position: fixed;
     bottom: 0;
-  }
-  /* Start the vertical centering */
-  .site-wrapper-inner {
+}
+/* Start the vertical centering */
+.site-wrapper-inner {
     vertical-align: middle;
-  }
-  /* Handle the widths */
+}
+
+/* Handle the widths */
+@media (min-width: 768px) {
   .masthead,
   .mastfoot,
   .cover-container {
