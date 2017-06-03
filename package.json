@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "dev": "webpack",
+    "watch": "webpack --watch",
+    "prod": "NODE_ENV=production webpack"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.3",
+    "purify-css": "^1.2.2",
+    "purifycss-webpack": "^0.7.0",
+    "sass-loader": "^6.0.5",
+    "webpack": "^2.6.1"
+  }
+}
