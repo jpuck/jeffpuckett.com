@@ -1,7 +1,7 @@
 var VERSION_CSS = '0.1.0';
 var webpack = require('webpack');
 var inProduction = (process.env.NODE_ENV === 'production');
-var outdir = __dirname + '/dist';
+var outdir = __dirname + '/docs';
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
 const glob = require('glob');
@@ -17,7 +17,7 @@ module.exports = {
     },
     output: {
         path: outdir,
-        filename: '[name].[chunkhash:8].js'
+        filename: 'css/[name].[chunkhash:8].js'
     },
     module: {
         rules: [
@@ -40,7 +40,7 @@ module.exports = {
                         loader: 'string-replace-loader',
                         query: {
                             search: /\$VERSION_CSS/,
-                            replace: '/dist/jp.'+VERSION_CSS+'.css'
+                            replace: '/css/jp.'+VERSION_CSS+'.css'
                         }
                     },
                     {
@@ -59,7 +59,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('jp.'+VERSION_CSS+'.css'),
+        new ExtractTextPlugin('css/jp.'+VERSION_CSS+'.css'),
         new PurifyCSSPlugin({
             // Give paths to parse for rules. These should be absolute!
             paths: glob.sync(path.join(__dirname, '/html/*.html')),
@@ -68,7 +68,7 @@ module.exports = {
         new webpack.LoaderOptionsPlugin({
             minimize: inProduction
         }),
-        new CleanWebpackPlugin(outdir),
+        new CleanWebpackPlugin(outdir+'/css'),
     ]
 };
 
