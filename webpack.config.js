@@ -11,6 +11,7 @@ module.exports = {
     entry: {
         jp: [
             './sass/main.scss',
+            './index.html',
         ]
     },
     output: {
@@ -24,11 +25,40 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     use: ['css-loader', 'sass-loader']
                 })
+            },
+            {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "/[name]-dist.[ext]",
+                        },
+                    },
+                    {
+                        loader: 'string-replace-loader',
+                        query: {
+                            search: /\/dist\/jp.+css/,
+                            replace: '/dist/[name].[chunkhash:8].css'
+                        }
+                    },
+                    {
+                        loader: "extract-loader",
+                    },
+                    {
+                        loader: 'html-loader',
+                        options: {
+                            minimize: inProduction,
+                            removeComments: inProduction,
+                            collapseWhitespace: inProduction
+                        }
+                    }
+                ]
             }
         ]
     },
     plugins: [
-        new ExtractTextPlugin("[name].[chunkhash:8].css"),
+        new ExtractTextPlugin("[name].[contenthash:8].css"),
         new PurifyCSSPlugin({
             // Give paths to parse for rules. These should be absolute!
             paths: glob.sync(path.join(__dirname, '*.html')),
