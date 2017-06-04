@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var inProduction = (process.env.NODE_ENV === 'production');
 var outdir = __dirname + '/dist';
+var css = '';
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
 const glob = require('glob');
@@ -21,12 +22,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.s[ac]ss$/,
-                use: ExtractTextPlugin.extract({
-                    use: ['css-loader', 'sass-loader']
-                })
-            },
-            {
                 test: /\.html$/,
                 use: [
                     {
@@ -39,7 +34,7 @@ module.exports = {
                         loader: 'string-replace-loader',
                         query: {
                             search: /\/dist\/jp.+css/,
-                            replace: '/dist/[name].[chunkhash:8].css'
+                            replace: css
                         }
                     },
                     {
@@ -54,11 +49,22 @@ module.exports = {
                         }
                     }
                 ]
-            }
+            },
+            {
+                test: /\.s[ac]ss$/,
+                use: ExtractTextPlugin.extract({
+                    use: ['css-loader', 'sass-loader'],
+                }),
+            },
         ]
     },
     plugins: [
-        new ExtractTextPlugin("[name].[contenthash:8].css"),
+        new ExtractTextPlugin({
+            filename:  (getPath) => {
+                css = getPath('[name].[contenthash:8].css');
+                return getPath('[name].[contenthash:8].css');
+            }
+        }),
         new PurifyCSSPlugin({
             // Give paths to parse for rules. These should be absolute!
             paths: glob.sync(path.join(__dirname, '*.html')),
