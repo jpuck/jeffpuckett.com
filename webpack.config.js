@@ -12,11 +12,12 @@ module.exports = {
     entry: {
         jp: [
             './sass/main.scss',
+            './js/google-analytics.js'
         ]
     },
     output: {
         path: outdir,
-        filename: 'css/[name].[chunkhash].js'
+        filename: 'js/[name].[chunkhash].js'
     },
     module: {
         rules: [
@@ -38,7 +39,7 @@ module.exports = {
         new webpack.LoaderOptionsPlugin({
             minimize: inProduction
         }),
-        new CleanWebpackPlugin(outdir+'/css'),
+        new CleanWebpackPlugin(['docs/js', 'docs/css']),
         new HtmlWebpackPlugin({
             template: 'html/index.html',
             filename: 'index.html',
