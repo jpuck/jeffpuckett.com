@@ -15,6 +15,13 @@ var trackOutboundLink = function(url) {
 
 // NOTE: all links are currently off-site
 $('a').click(function(){
-    trackOutboundLink(this.href);
-    return false;
+    var loaded = false;
+    ga(function() {
+        loaded = true;
+    });
+
+    if (loaded) {
+        trackOutboundLink(this.href);
+        return false;
+    }
 });
