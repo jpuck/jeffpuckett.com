@@ -35,4 +35,8 @@
     Implemented C++ reinforcement learning algorithms in CS graduate school classes
     utilizing neural networks to train agents mastering video games.
 
+* Licensed Pilot : Single Engine Sport
+
+* HAM Radio Operator : KD5OJL
+
 [1]:https://www.gnupg.org/
