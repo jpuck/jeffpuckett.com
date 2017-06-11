@@ -30,7 +30,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('css/jp.[contenthash].css'),
+        new ExtractTextPlugin('css/[name].[contenthash].css'),
         new PurifyCSSPlugin({
             // Give paths to parse for rules. These should be absolute!
             paths: glob.sync(path.join(__dirname, '/html/*.html')),
