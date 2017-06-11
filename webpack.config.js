@@ -13,7 +13,10 @@ module.exports = {
         jp: [
             './sass/main.scss',
             './js/google-analytics.js'
-        ]
+        ],
+        cv: [
+            './sass/resume.scss',
+        ],
     },
     output: {
         path: outdir,
@@ -43,11 +46,21 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'html/index.html',
             filename: 'index.html',
+            chunks: ['jp'],
             minify: {
                 collapseWhitespace: inProduction,
                 removeComments: inProduction
             }
-        })
+        }),
+        new HtmlWebpackPlugin({
+            template: 'html/resume.html',
+            filename: 'resume/index.html',
+            chunks: ['cv'],
+            minify: {
+                collapseWhitespace: inProduction,
+                removeComments: inProduction
+            }
+        }),
     ]
 };
 
