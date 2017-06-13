@@ -1,8 +1,7 @@
 {
   "scripts": {
-    "dev": "webpack",
-    "watch": "webpack --watch",
-    "prod": "NODE_ENV=production webpack"
+    "dev": "ruby ruby/github-markup.rb && webpack",
+    "prod": "ruby ruby/github-markup.rb && NODE_ENV=production webpack"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.16",
