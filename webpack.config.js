@@ -7,6 +7,7 @@ const glob = require('glob');
 const PurifyCSSPlugin = require('purifycss-webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
 
 module.exports = {
     entry: {
@@ -55,12 +56,16 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'html/resume.html',
             filename: 'resume/index.html',
-            chunks: ['cv'],
             minify: {
                 collapseWhitespace: inProduction,
                 removeComments: inProduction
-            }
+            },
+            excludeAssets: [
+                /cv.*.js/,
+                /jp.*.css/
+            ],
         }),
+        new HtmlWebpackExcludeAssetsPlugin(),
     ]
 };
 
