@@ -17,6 +17,7 @@ module.exports = {
         ],
         cv: [
             './sass/resume.scss',
+            './js/cv.js',
         ],
     },
     output: {
@@ -61,7 +62,6 @@ module.exports = {
                 removeComments: inProduction
             },
             excludeAssets: [
-                /cv.*.js/,
                 /jp.*.css/
             ],
         }),
