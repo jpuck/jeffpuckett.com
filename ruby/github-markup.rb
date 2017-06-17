@@ -39,7 +39,7 @@ File.open(out, 'w') do |output|
         "<small style='float:right'>updated #{time}</small><br>" +
         '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script>
-        $("body").append(\'<input style="float:right" type="button" onclick="location.href=&quot;./' + data['cv']['file'] + '&quot;" value="Download PDF" />\')
+        $("body").append(\'<button style="float:right" onclick="window.open(&quot;./' + data['cv']['file'] + '&quot;)">Download PDF</button>\')
         </script>
     </body>
     </html>'
