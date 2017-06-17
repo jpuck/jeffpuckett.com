@@ -3,40 +3,46 @@ require 'time'
 require 'json'
 require 'digest/md5'
 
-file = 'markdown/resume.md'
-out = 'html/resume.html'
+file = 'markdown/cv.md'
+out = 'html/cv.html'
 manifest = 'manifest.json'
 
 time = Time.now.utc.iso8601
-resume = JSON.parse(File.read(manifest))['resume']
+cv = JSON.parse(File.read(manifest))['cv']
 
 newhash = Digest::MD5.hexdigest(File.read(file))
-oldhash = resume['hash']
+oldhash = cv['hash']
 
 if newhash == oldhash
-    puts 'same resume markdown, skipping html build'
+    puts 'same cv markdown, skipping html build'
     exit
 end
 
 data = {
-    'resume' => {
+    'cv' => {
         'time' => time,
         'hash' => newhash,
         'file' => "Puckett-Jeff.#{time}.pdf",
     },
 }
 
-puts 'building html from markdown resume'
+puts 'building html from markdown cv'
 File.open(out, 'w') do |output|
-    output.puts '<head><meta name="viewport" content="width=device-width, initial-scale=1"></head>' +
-        '<body class="markdown-body">' +
+    output.puts '
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body class="markdown-body">' +
         GitHub::Markup.render(file, File.read(file)) +
-        "<small style='float:right'>updated #{time}</small>" +
-        '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>' +
-        '<script>$(\'body\').prepend(\'<input style="float:right" type="button" onclick="location.href=&quot;./' +
-        data['resume']['file'] +
-        '&quot;" value="Download PDF" />' +
-        '\')</script></body>'
+        "<small style='float:right'>updated #{time}</small><br>" +
+        '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+        $("body").append(\'<input style="float:right" type="button" onclick="location.href=&quot;./' + data['cv']['file'] + '&quot;" value="Download PDF" />\')
+        </script>
+    </body>
+    </html>'
 end
 
 File.open(manifest, 'w') do |output|

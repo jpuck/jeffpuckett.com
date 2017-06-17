@@ -12,6 +12,6 @@ ruby ruby/github-markup.rb
 
 npm run webpack
 
-filename="$(jq --raw-output '.resume.file' manifest.json)"
+filename="$(jq --raw-output '.cv.file' manifest.json)"
 
-wkhtmltopdf --disable-javascript docs/resume/index.html "docs/resume/$filename"
+wkhtmltopdf --disable-javascript docs/cv/index.html "docs/cv/$filename"

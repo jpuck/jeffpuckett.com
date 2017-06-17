@@ -11,17 +11,17 @@ const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plug
 
 module.exports = {
     entry: {
-        jp: [
+        main: [
             './sass/main.scss',
             './js/google-analytics.js'
         ],
         cv: [
-            './sass/resume.scss',
+            './sass/cv.scss',
         ],
     },
     output: {
         path: outdir,
-        filename: 'js/[name].[chunkhash].js'
+        filename: 'js/jp.[name].[chunkhash].js'
     },
     module: {
         rules: [
@@ -34,7 +34,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('css/[name].[contenthash].css'),
+        new ExtractTextPlugin('css/jp.[name].[contenthash].css'),
         new PurifyCSSPlugin({
             // Give paths to parse for rules. These should be absolute!
             paths: glob.sync(path.join(__dirname, '/html/*.html')),
@@ -46,27 +46,27 @@ module.exports = {
         new CleanWebpackPlugin([
             'docs/js',
             'docs/css',
-            'docs/resume',
+            'docs/cv',
         ]),
         new HtmlWebpackPlugin({
             template: 'html/index.html',
             filename: 'index.html',
-            chunks: ['jp'],
+            chunks: ['main'],
             minify: {
                 collapseWhitespace: inProduction,
                 removeComments: inProduction
             }
         }),
         new HtmlWebpackPlugin({
-            template: 'html/resume.html',
-            filename: 'resume/index.html',
+            template: 'html/cv.html',
+            filename: 'cv/index.html',
             minify: {
                 collapseWhitespace: inProduction,
                 removeComments: inProduction
             },
             excludeAssets: [
-                /jp.*.css/,
-                /cv.*.js/,
+                /jp.main.*.css/,
+                /jp.cv.*.js/,
             ],
         }),
         new HtmlWebpackExcludeAssetsPlugin(),
