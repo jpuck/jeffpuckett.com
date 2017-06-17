@@ -21,7 +21,7 @@ module.exports = {
     },
     output: {
         path: outdir,
-        filename: 'js/jp.[name].[chunkhash].js'
+        filename: 'js/jp.[name].js'
     },
     module: {
         rules: [
@@ -34,7 +34,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('css/jp.[name].[contenthash].css'),
+        new ExtractTextPlugin('css/jp.[name].css'),
         new PurifyCSSPlugin({
             // Give paths to parse for rules. These should be absolute!
             paths: glob.sync(path.join(__dirname, '/html/*.html')),
@@ -65,8 +65,8 @@ module.exports = {
                 removeComments: inProduction
             },
             excludeAssets: [
-                /jp.main.*.css/,
-                /jp.cv.*.js/,
+                /jp.main.css/,
+                /jp.cv.js/,
             ],
         }),
         new HtmlWebpackExcludeAssetsPlugin(),
