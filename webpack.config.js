@@ -17,7 +17,6 @@ module.exports = {
         ],
         cv: [
             './sass/resume.scss',
-            './js/cv.js',
         ],
     },
     output: {
@@ -44,7 +43,11 @@ module.exports = {
         new webpack.LoaderOptionsPlugin({
             minimize: inProduction
         }),
-        new CleanWebpackPlugin(['docs/js', 'docs/css']),
+        new CleanWebpackPlugin([
+            'docs/js',
+            'docs/css',
+            'docs/resume',
+        ]),
         new HtmlWebpackPlugin({
             template: 'html/index.html',
             filename: 'index.html',
@@ -62,7 +65,8 @@ module.exports = {
                 removeComments: inProduction
             },
             excludeAssets: [
-                /jp.*.css/
+                /jp.*.css/,
+                /cv.*.js/,
             ],
         }),
         new HtmlWebpackExcludeAssetsPlugin(),
