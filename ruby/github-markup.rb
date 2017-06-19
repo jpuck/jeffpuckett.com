@@ -33,6 +33,7 @@ File.open(out, 'w') do |output|
     <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jeff Puckett r&eacute;sum&eacute; curriculum vitae</title>
     </head>
     <body class="markdown-body">' +
         GitHub::Markup.render(file, File.read(file)) +
