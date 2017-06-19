@@ -7,9 +7,18 @@
 
 * **Programmer** : University of Arkansas  
     *April 2015 - Present*  
-    Architected, implemented, and maintained a variety of web applications using
-    PHP, the Laravel MVC framework, XSLT, and Javascript including Node JS.
-    Systems administrator for Linux servers.
+    Architects, implements, and maintains a variety of web applications and
+    modular libraries using a Test-Driven Development methodology with PHP,
+    the Laravel MVC framework, XSLT, ASP.NET, and Javascript (both client-side
+    and server-side with Node JS).
+    Well versed in dependency management systems such as composer, npm, and apt.
+    Capable with front-end pre-processor languages like Sass and transpiling
+    build tools for minification and optimization such as Webpack, Gulp, and Babel.
+    All code strictly managed under version control with continuous integration
+    deployment strategies based on git-flow.
+    Responsibilities include being System Administrator for Linux servers
+    tuning Apache, Nginx, OpenSSL, and Docker configurations.
+    Writes scripts for assorted tasks in Bash and Powershell.
 
 * **Instructor** : University of Arkansas, Department of Information Systems  
     *Fall 2016 - Spring 2017*  
