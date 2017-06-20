@@ -75,7 +75,9 @@ body {
 .masthead-nav > li + li {
   margin-left: 20px;
 }
-.masthead-nav > li > a {
+.masthead-nav > li > a,
+.masthead-nav .open>a, {
+  background-color: transparent;
   padding-right: 0;
   padding-left: 0;
   font-size: 16px;
@@ -85,7 +87,9 @@ body {
   border-bottom: 2px solid transparent;
 }
 .masthead-nav > li > a:hover,
-.masthead-nav > li > a:focus {
+.masthead-nav > li > a:focus,
+.masthead-nav .open>a:focus,
+.masthead-nav .open>a:hover {
   background-color: transparent;
   border-bottom-color: #a9a9a9;
   border-bottom-color: rgba(255,255,255,.25);
@@ -95,6 +99,11 @@ body {
 .masthead-nav > .active > a:focus {
   color: #fff;
   border-bottom-color: #fff;
+}
+
+.masthead-nav .dropdown-menu {
+    left: inherit;
+    right: 0;
 }
 
 @media (min-width: 768px) {
