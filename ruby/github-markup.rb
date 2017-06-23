@@ -33,7 +33,19 @@ File.open(out, 'w') do |output|
     <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Jeff Puckett r&eacute;sum&eacute; curriculum vitae</title>
+        <title>Jeff Puckett r&eacute;sum&eacute; / curriculum vitae</title>
+        <meta name="description" content="Jeff Puckett\'s r&eacute;sum&eacute; / curriculum vitae. He is a programmer and instructor at the University of Arkansas.">
+        <meta name="author" content="Jeff Puckett">
+        <link rel="icon" href="/favicon.ico">
+        <meta property="og:title" content="Jeff Puckett" />
+        <meta property="og:description" content="Jeff Puckett\'s r&eacute;sum&eacute; / curriculum vitae. He is a programmer and instructor at the University of Arkansas." />
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content="https://jeffpuckett.com" />
+        <meta property="og:image" content="https://jeffpuckett.com/images/jeff-puckett.gsm.jpg" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@_jpuck" />
+        <meta name="twitter:creator" content="@_jpuck" />
+        <meta name="twitter:image:alt" content="A profile picture of Jeff Puckett." />
     </head>
     <body class="markdown-body">' +
         GitHub::Markup.render(file, File.read(file)) +
