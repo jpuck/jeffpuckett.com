@@ -32,7 +32,8 @@
     Focus on systems analysis and design for enterprise transaction systems with
     an emphasis in business process re-engineering and data analytics.
     Included work on COBOL programming with DB2 for IBM mainframe applications,
-    and data mining techniques with SAS Enterprise Miner and SPSS Modeler.
+    and data mining techniques with SAS Enterprise Miner, SPSS Modeler, and Tableau.
+    Authored Java desktop applications using Model View Controller paradigm.
 
 ## Extra
 
