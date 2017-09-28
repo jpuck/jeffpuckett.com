@@ -21,9 +21,10 @@
     Writes scripts for assorted tasks in Bash and Powershell.
 
 * **Instructor** : University of Arkansas, Department of Information Systems  
-    *Fall 2016 - Spring 2017*  
-    Taught senior undergraduate course on database design and application
-    development with C# using Microsoft SQL Server, Teradata, MySQL, and Oracle.
+    *Fall 2016 - Present*  
+    *https://github.com/isys4283*  
+    Teaches senior undergraduate course on database design and application
+    development with C# using Microsoft SQL Server, Teradata, and MySQL.
 
 ## Education
 
