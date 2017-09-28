@@ -7,6 +7,8 @@
 
 * **Programmer** : University of Arkansas  
     *April 2015 - Present*  
+    *https://github.com/razorbacks*  
+    *https://github.com/uawcob*  
     Architects, implements, and maintains a variety of web applications and
     modular libraries using a Test-Driven Development methodology with PHP,
     the Laravel MVC framework, XSLT, ASP.NET, and Javascript (both client-side
