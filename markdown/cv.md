@@ -47,8 +47,11 @@
     with an HTTP server tier for distributed synchronization.
 
 * **Artificial Intelligence & Machine Learning**  
+    *https://github.com/jpuck/snappybird*  
+    *https://github.com/jpuck/neural-network*  
     Implemented C++ reinforcement learning algorithms in CS graduate school classes
     utilizing neural networks to train agents mastering video games.
+    Ported the neural network compiled with extern C as a PHP native extension.
 
 * **Licensed Pilot** : Single Engine Sport
 
