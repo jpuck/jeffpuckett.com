@@ -25,6 +25,7 @@
 * **Instructor** : University of Arkansas, Department of Information Systems  
     *Fall 2016 - Present*  
     *https://github.com/isys4283*  
+    *https://isys4283.walton.uark.edu*  
     Teaches senior undergraduate course on database design and application
     development with C# using Microsoft SQL Server, Teradata, and MySQL.
 
