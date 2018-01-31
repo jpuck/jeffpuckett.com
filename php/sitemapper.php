@@ -3,6 +3,7 @@
 $pages = [
     'docs/index.html' => 'https://jeffpuckett.com/',
     'docs/cv/index.html' => 'https://jeffpuckett.com/cv/',
+    'docs/gpg/index.html' => 'https://jeffpuckett.com/gpg/',
 ];
 
 $sitemap = realpath(__DIR__.'/../docs/sitemap.xml');
