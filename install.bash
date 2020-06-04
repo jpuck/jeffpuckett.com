@@ -1,5 +1,5 @@
 #!/bin/bash
 
-bundle install
+bundle install --path vendor/bundle
 npm install
 composer install

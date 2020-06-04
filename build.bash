@@ -8,7 +8,7 @@ set -e
 
 cd $( dirname "${BASH_SOURCE[0]}" )
 
-ruby ./ruby/github-markup.rb
+bundle exec ruby ./ruby/github-markup.rb
 
 npm run webpack
 
