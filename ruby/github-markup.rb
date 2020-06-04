@@ -8,7 +8,7 @@ out = 'html/cv.html'
 manifest = 'manifest.json'
 
 time = Time.now.utc.iso8601
-time.gsub! ':', '.' # windows compat BOOOOOO
+filenameFriendlyTime = time.gsub ':', '.' # MS Windows compat BOOOOOO
 cv = JSON.parse(File.read(manifest))['cv']
 
 newhash = Digest::MD5.hexdigest(File.read(file))
@@ -23,7 +23,7 @@ data = {
     'cv' => {
         'time' => time,
         'hash' => newhash,
-        'file' => "Puckett-Jeff.#{time}.pdf",
+        'file' => "Puckett-Jeff.#{filenameFriendlyTime}.pdf",
     },
 }
 
