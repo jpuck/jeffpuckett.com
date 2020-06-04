@@ -8,6 +8,7 @@ out = 'html/cv.html'
 manifest = 'manifest.json'
 
 time = Time.now.utc.iso8601
+time.gsub! ':', '.' # windows compat BOOOOOO
 cv = JSON.parse(File.read(manifest))['cv']
 
 newhash = Digest::MD5.hexdigest(File.read(file))
