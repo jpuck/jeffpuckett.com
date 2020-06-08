@@ -5,56 +5,32 @@
 
 ## Employment
 
-* **Programmer** : University of Arkansas  
-    *April 2015 - Present*  
-    *https://github.com/razorbacks*  
-    *https://github.com/uawcob*  
-    Architects, implements, and maintains a variety of web applications and
-    modular libraries using a Test-Driven Development methodology with PHP,
-    the Laravel MVC framework, XSLT, ASP.NET, and Javascript (both client-side
-    and server-side with Node JS).
-    Well versed in dependency management systems such as composer, npm, and apt.
-    Capable with front-end pre-processor languages like Sass and transpiling
-    build tools for minification and optimization such as Webpack, Gulp, and Babel.
-    All code strictly managed under version control with continuous integration
-    deployment strategies based on git-flow.
-    Responsibilities include being System Administrator for Linux servers
-    tuning Apache, Nginx, OpenSSL, and Docker configurations.
-    Writes scripts for assorted tasks in Bash and Powershell.
+### Dealer Inspire
+*February 2018 - Present*
 
-* **Instructor** : University of Arkansas, Department of Information Systems  
-    *Fall 2016 - Present*  
-    *https://github.com/isys4283*  
-    *https://isys4283.walton.uark.edu*  
-    Teaches senior undergraduate course on database design and application
-    development with C# using Microsoft SQL Server, Teradata, and MySQL.
+* Lead Developer - FUEL
+
+Worked with a highly effective team over 2 years to sunset a major legacy system managing millions of dollars monthly in ad spends to transitioning those feature implementations in a modern API (Laravel) and SPA (React w/TypeScript) while also iteratively building new features.
+
+### University of Arkansas
+*December 2006 - January 2018*  
+
+* Instructor - Department of Information Systems
+
+Taught senior undergraduate course on database design and application
+development with C# using Microsoft SQL Server, Teradata, and MySQL
+
+* Programmer - Walton College of Business
+
+Architected, implemented, and maintained a variety of web and desktop applications in PHP (Laravel), XSLT, C#, ASP.NET, and JavaScript (client and Node JS) to support academic research projects as well as administrative applications.
+Responsibilities included some system administration for Linux servers
+tuning Apache, Nginx, and Docker configurations
 
 ## Education
 
-* **Masters, Information Systems** : University of Arkansas  
-    *Graduated 2016*  
-    Focus on systems analysis and design for enterprise transaction systems with
-    an emphasis in business process re-engineering and data analytics.
-    Included work on COBOL programming with DB2 for IBM mainframe applications,
-    and data mining techniques with SAS Enterprise Miner, SPSS Modeler, and Tableau.
-    Authored Java desktop applications using Model View Controller paradigm.
+### Masters, Information Systems : University of Arkansas
+*Graduated 2016*  
 
-## Extra
-
-* **Artificial Intelligence & Machine Learning**  
-    *https://github.com/jpuck/snappybird*  
-    *https://github.com/jpuck/neural-network*  
-    Implemented C++ reinforcement learning algorithms in CS graduate school classes
-    utilizing neural networks to train agents mastering video games.
-    Ported the neural network compiled with extern C as a PHP native extension.
-
-* **Security** : Author of GPG Locker  
-    *https://github.com/gpgl*  
-    Modern cryptographic console application built on top of [GnuPG][1]
-    with an HTTP server tier for distributed synchronization.
-
-* **Licensed Pilot** : Single Engine Sport
-
-* **HAM Radio Operator** : KD5OJL
-
-[1]:https://www.gnupg.org/
+Focus on systems analysis and design for enterprise transaction systems with an emphasis in business process re-engineering and data analytics.
+Implemented multiple IBM mainframe business applications in COBOL backended to DB2.
+Exercised data mining techniques with SAS Enterprise Miner, SPSS Modeler, and Tableau to build predictive models.
