@@ -34,3 +34,10 @@ tuning Apache, Nginx, and Docker configurations
 Focus on systems analysis and design for enterprise transaction systems with an emphasis in business process re-engineering and data analytics.
 Implemented multiple IBM mainframe business applications in COBOL backended to DB2.
 Exercised data mining techniques with SAS Enterprise Miner, SPSS Modeler, and Tableau to build predictive models.
+
+### Bachelor of Arts, Psychology/Sociology/Anthropology : University of Arkansas
+*Graduated 2012*  
+
+Double major in first Psychology and second combined Sociology with Anthropology.
+With great love for people I spent years studying as much as I could about us.
+Classically trained in the behavioral sciences with an emphasis on research and statistics from internal workings of the mind to collaborative global social dynamics.
