@@ -22,19 +22,70 @@
         <style media="screen">
             body {
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
+                padding-top: 4rem;
             }
             .download {
                 position: fixed;
                 top: 1rem;
                 left: 1rem;
+                padding: 0.5rem 1rem;
+                background: #fff;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                color: #333;
+                text-decoration: none;
+                font-size: 0.875rem;
+                z-index: 10;
+                white-space: nowrap;
+            }
+            @media (max-width: 480px) {
+                .download {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            .download:hover {
+                background: #f0f0f0;
+            }
+            .key-container {
+                width: 100%;
+                overflow-x: auto;
+                display: block;
+            }
+            .details {
+                display: block;
+                width: 100%;
+            }
+            pre {
+                padding: 1rem;
+                background: #f8f8f8;
+                border: 1px solid #e0e0e0;
+                border-radius: 4px;
+                font-size: 0.8rem;
+                line-height: 1.5;
+                overflow-x: auto;
+                white-space: pre;
+            }
+            .details {
+                margin-top: 2rem;
+                padding: 1rem;
+                font-family: monospace;
+                font-size: 0.8rem;
+                line-height: 1.8;
+                color: #555;
+            }
+            .details .label {
+                color: #888;
+                min-width: 4.5rem;
+                display: inline-block;
             }
         </style>
     </head>
     <body>
         <a class="download" href="jeffpuckett-9d04ce946f11cee29e9c9849e215dc2752c7ea1b.asc">Download</a>
-        <pre>
------BEGIN PGP PUBLIC KEY BLOCK-----
+<div class="key-container"><pre>-----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mDMEahyqQhYJKwYBBAHaRw8BAQdAFJM7Ld+voxXX1df6m2SV7Omp/9nvGIlgbD7l
 Em856RO0I0plZmYgUHVja2V0dCA8amVmZkBqZWZmcHVja2V0dC5jb20+iJkEExYK
@@ -46,7 +97,13 @@ vwLNZltnIp1I+WQDAQgHiH4EGBYKACYWIQQID1vbA/j+36iWgTZSXi3FyE0nWwUC
 ahyqQgIbDAUJBaOagAAKCRBSXi3FyE0nWyoWAQCrjqlZeOLegGXGxVMMYkuc4gX1
 p3J21tHHcrd24xdg/AEA3a2KsXKiRIgVSrq0RiBbvrJWpcZtVKZRWmakKsgbqwY=
 =CH6D
------END PGP PUBLIC KEY BLOCK-----
-        </pre>
+-----END PGP PUBLIC KEY BLOCK-----</pre></div>
+
+<div class="details">
+<div><span class="label">algorithm</span>ed25519 (signing), cv25519 (encryption)</div>
+<div><span class="label">fingerprint</span>080F 5BDB 03F8 FEDF A896 8136 525E 2DC5 C84D 275B</div>
+<div><span class="label">expires</span>2029-05-30</div>
+<div><span class="label">uid</span>Jeff Puckett &lt;jeff@jeffpuckett.com&gt;</div>
+</div>
     </body>
 </html>
